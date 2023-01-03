@@ -209,18 +209,18 @@
     }
 
     // if no permissions granted try to request them first
-//    if (status == kABAuthorizationStatusNotDetermined) {
-//        ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
-//            if (granted) {
-//                [self chooseContact:newCommand];
-//                return;
-//            }
-//
-//            [self.commandDelegate sendPluginResult: errorResult callbackId:command.callbackId];
-//        });
-//    }
-    
-    
+    //    if (status == kABAuthorizationStatusNotDetermined) {
+    //        ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+    //            if (granted) {
+    //                [self chooseContact:newCommand];
+    //                return;
+    //            }
+    //
+    //            [self.commandDelegate sendPluginResult: errorResult callbackId:command.callbackId];
+    //        });
+    //    }
+
+
     // if no permissions granted try to request them first
       if (status == kABAuthorizationStatusNotDetermined) {
           ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
@@ -231,11 +231,11 @@
                       return;
                   }
               [self.commandDelegate sendPluginResult: errorResult callbackId:command.callbackId];
-               
+
               });
           });
       }
-  
+
 }
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker
